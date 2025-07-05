@@ -1,0 +1,34 @@
+# === Sistema y editor ===
+.DS_Store
+.vscode/
+
+# === Node.js ===
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# === Logs generales ===
+*.log
+
+# === Archivos de entorno ===
+.env
+.env.local
+.env.*.local
+
+# === Producción / compilados (por si usas React o similar) ===
+frontend/build/
+backend/dist/
+dist/
+build/
+
+# === Sistemas operativos ===
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# === Otros temporales ===
+*.swp
+*.swo
+*.tmp

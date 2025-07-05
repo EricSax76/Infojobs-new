@@ -1,0 +1,190 @@
+/* landing.css - Modern Landing Page Styling */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', Arial, sans-serif;
+  color: #333;
+  background: hwb(223 83% 7%);
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.landing-header {
+  background: linear-gradient(135deg, #5b8def, #4f46e5);
+  color: #fff;
+  padding: 80px 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.landing-header h1 {
+  font-size: 5rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.landing-header p {
+  font-size: 1.2rem;
+}
+
+.landing-main {
+  flex: 1;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.section-optimization,
+.section-benefits,
+.section-candidates,
+.section-how-it-works {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-optimization h2,
+.section-benefits h2,
+.section-candidates h2,
+.section-how-it-works h2 {
+  font-size: 2rem;
+  color: #4f46e5;
+}
+
+.section-optimization li,
+.section-candidates li {
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-optimization li::before,
+.section-candidates li::before {
+  content: "✔️";
+  color: #4f46e5;
+}
+
+.benefits-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.benefit {
+  padding: 20px;
+  background: #f9fafb;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(79, 70, 229, 0.2);
+}
+
+.benefit h3 {
+  font-size: 1.3rem;
+  color: #333;
+}
+
+.benefit p {
+  color: #555;
+}
+
+.section-how-it-works ol {
+  padding-left: 20px;
+}
+
+.section-how-it-works li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.btn {
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s, transform 0.2s;
+  font-weight: 600;
+}
+
+.btn-register {
+  background-color: #4f46e5;
+}
+
+.btn-register:hover {
+  background-color: #4338ca;
+  transform: scale(1.05);
+}
+
+.btn-login {
+  background-color: #ef4444;
+}
+
+.btn-login:hover {
+  background-color: #dc2626;
+  transform: scale(1.05);
+}
+
+.landing-footer {
+  background: #f9fafb;
+  padding: 20px;
+  color: #888;
+}
+
+.landing-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.landing-nav .logo {
+  font-size: 2.6rem;
+  font-weight: bold;
+  color: hsl(243, 30%, 46%);
+}
+
+@media (max-width: 768px) {
+  .landing-header h1 {
+    font-size: 2.5rem;
+  }
+
+  .section-optimization,
+  .section-benefits,
+  .section-candidates,
+  .section-how-it-works {
+    padding: 30px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+}
+  

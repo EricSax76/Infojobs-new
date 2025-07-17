@@ -23,7 +23,7 @@ const Companyregister = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:5001/api/companies", {
+      const response = await fetch("http://localhost:5001/companies", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

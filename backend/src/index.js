@@ -3,6 +3,7 @@ import cors from 'cors';
 import { connectToDatabase } from '../database/connection.js';
 import jobOffersRoutes from '../routes/offerRoutes.js';
 import candidateRoutes from "../routes/candidateRoutes.js";
+import companyRoutes from "../routes/companyRoutes.js";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -23,6 +24,7 @@ app.use(express.json());
     // Rutas
     app.use('/api/job_offers', jobOffersRoutes);
     app.use("/api/candidates", candidateRoutes);
+    app.use("/api/companies", companyRoutes); 
 
     // Ruta raíz
     app.get('/', (_req, res) => {

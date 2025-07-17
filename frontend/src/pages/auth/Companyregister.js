@@ -23,7 +23,7 @@ const Companyregister = () => {
     e.preventDefault();
   
     try {
-      const response = await fetch("http://localhost:5001/companies", {
+      const response = await fetch("http://localhost:5001/api/companies", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,74 +50,75 @@ const Companyregister = () => {
     <div className="register-container">
       <h2>Regístrate como Empresa</h2>
       <form onSubmit={handleSubmit}>
-        <label>
-          Nombre de la Empresa:
-          <input
-            type="text"
-            name="nombre"
-            value={empresa.nombre}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          CIF:
-          <input
-            type="text"
-            name="nombre"
-            value={empresa.nombre}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Sector:
-          <input
-            type="text"
-            name="sector"
-            value={empresa.sector}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Tamaño de la Empresa:
-          <select
-            name="tamano"
-            value={empresa.tamano}
-            onChange={handleChange}
-            required
-          >
-            <option value="">Selecciona una opción</option>
-            <option value="pequeña">Pequeña (1-50 empleados)</option>
-            <option value="mediana">Mediana (51-250 empleados)</option>
-            <option value="grande">Grande (+250 empleados)</option>
-          </select>
-        </label>
-        <label>
-          Email:
-          <input
-            type="email"
-            name="email"
-            value={empresa.email}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <label>
-          Contraseña:
-          <input
-            type="password"
-            name="password"
-            value={empresa.password}
-            onChange={handleChange}
-            required
-          />
-        </label>
-        <button type="submit" className="btn-submit">
-          Registrarse
-        </button>
-      </form>
+  <label>
+    Nombre de la Empresa:
+    <input
+      type="text"
+      name="nombre"
+      value={empresa.nombre}
+      onChange={handleChange}
+      required
+    />
+  </label>
+  <label>
+    CIF:
+    <input
+      type="text"
+      name="cif" // ✅ corregido
+      value={empresa.cif} // ✅ corregido
+      onChange={handleChange}
+      required
+    />
+  </label>
+  <label>
+    Sector:
+    <input
+      type="text"
+      name="sector"
+      value={empresa.sector}
+      onChange={handleChange}
+      required
+    />
+  </label>
+  <label>
+    Tamaño de la Empresa:
+    <select
+      name="tamano"
+      value={empresa.tamano}
+      onChange={handleChange}
+      required
+    >
+      <option value="">Selecciona una opción</option>
+      <option value="pequeña">Pequeña (1-50 empleados)</option>
+      <option value="mediana">Mediana (51-250 empleados)</option>
+      <option value="grande">Grande (+250 empleados)</option>
+    </select>
+  </label>
+  <label>
+    Email:
+    <input
+      type="email"
+      name="email"
+      value={empresa.email}
+      onChange={handleChange}
+      required
+    />
+  </label>
+  <label>
+    Contraseña:
+    <input
+      type="password"
+      name="password"
+      value={empresa.password}
+      onChange={handleChange}
+      required
+    />
+  </label>
+  <button type="submit" className="btn-submit">
+    Registrarse
+  </button>
+</form>
+
     </div>
   );
 };

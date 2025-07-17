@@ -52,7 +52,7 @@ const Login = () => {
     if (allFieldsValid && allFieldsFilled) {
       try {
         // Enviar las credenciales al backend
-        const response = await axios.post("http://localhost:5001/login", formData);
+        const response = await axios.post("http://localhost:5001/api/companies/login", formData);
 
         // Guardar el token en localStorage
         localStorage.setItem("token", response.data.token);

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DashboardCompany from './pages/DashboardCompany';
+import CandidateLogin from "./pages/auth/CandidateLogin.js"
 import JobOfferPage from './pages/JobOfferPage';
 import LandingPage from "./pages/LandingPage";
 import Login from "./pages/Login";
@@ -18,8 +19,9 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
-                    <Route path="candidateregister" element={<Candidateregister />} />
                     <Route path="/login" element={<Login />} />
+                    <Route path="candidateregister" element={<Candidateregister />} />
+                    <Route path="CandidateLogin" element={<CandidateLogin />} />
                     <Route path='CandidateDashboard' element={<CandidateDashboard />} />
                     <Route path="companyregister" element={<Companyregister />} />
                     <Route path="/CompanyLogin" element={<CompanyLogin />} />

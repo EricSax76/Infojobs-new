@@ -31,9 +31,9 @@ router.get('/:id', async (req, res) => {
 
 // Crear un nuevo usuario
 router.post('/', async (req, res) => {
-    const { name, email, password_hash, role } = req.body;
+    const { name, email, password, role } = req.body;
     try {
-        const newUser = await createUser({ name, email, password_hash, role });
+        const newUser = await createUser({ name, email, password, role });
         res.status(201).json(newUser);
     } catch (error) {
         console.error('Error al crear el usuario:', error);

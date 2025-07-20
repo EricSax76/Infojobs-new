@@ -3,12 +3,10 @@ import { createCandidate, getAllCandidates, getCandidateById } from '../models/c
 
 export const createCandidateController = async (req, res) => {
   try {
-    const { name, email, password, skills, experience } = req.body;
+    const { name, email, password} = req.body;
     const user = await createUser({ name, email, password });
     const candidate = await createCandidate({
       userId: user.id,
-      skills,
-      experience,
     });
     res.status(201).json({ message: 'Candidate created successfully', candidate });
   } catch (error) {

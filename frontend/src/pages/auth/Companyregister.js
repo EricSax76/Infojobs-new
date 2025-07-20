@@ -39,7 +39,7 @@ const Companyregister = () => {
       console.log("Respuesta del backend:", data);
   
       // Redirigir al usuario después de un envío exitoso
-      navigate("/login");
+      navigate("/CompanyLogin");
     } catch (error) {
       console.error("Hubo un problema con la solicitud:", error);
     }

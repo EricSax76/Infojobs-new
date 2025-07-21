@@ -3,7 +3,6 @@ import cors from 'cors';
 import { connectToDatabase } from '../database/connection.js';
 import jobOffersRoutes from '../routes/offerRoutes.js';
 import userRoutes from './routes/users.js'; // O ajusta la ruta si estás en otra carpeta
-app.use('/api/users', userRoutes);
 import candidateRoutes from "../routes/candidateRoutes.js";
 import companyRoutes from "../routes/companyRoutes.js";
 import dotenv from "dotenv";
@@ -16,7 +15,6 @@ const PORT = process.env.PORT || 5001;
 // Middleware
 app.use(cors());
 app.use(express.json());
-
 // Conexión a la base de datos
 (async () => {
   try {
@@ -27,7 +25,7 @@ app.use(express.json());
     app.use('/api/job_offers', jobOffersRoutes);
     app.use("/api/candidates", candidateRoutes);
     app.use("/api/companies", companyRoutes); 
-
+    app.use('/api/users', userRoutes);
     // Ruta raíz
     app.get('/', (_req, res) => {
       res.send('Backend funcionando correctamente');

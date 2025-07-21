@@ -3,7 +3,7 @@ import {
   createCandidateController,
   getCandidatesController,
   getCandidateByIdController
-} from '../controllers/candidateController.js';
+} from '../controllers /candidateController.js';
 
 const router = express.Router();
 

@@ -1,5 +1,36 @@
+import bcrypt from 'bcrypt';    
 import { createUser } from '../models/userModel.js';
 import { createCandidate, getAllCandidates, getCandidateById } from '../models/candidateModel.js';
+
+export const loginCandidateController = async (req, res) => {
+  const { email, password } = req.body;
+  try {
+    const result = await dbClient.query(
+      'SELECT * FROM users WHERE email = $1 AND role = $2',
+      [email, 'candidate']
+    );
+    const user = result.rows[0];
+
+    if (!user) {
+      return res.status(401).json({ message: 'Usuario no encontrado' });
+    }
+
+    const match = await bcrypt.compare(password, user.password_hash);
+    if (!match) {
+      return res.status(401).json({ message: 'Contraseña incorrecta' });
+    }
+
+    res.status(200).json({
+      id: user.id,
+      name: user.name,
+      email: user.email,
+      role: user.role
+    });
+  } catch (error) {
+    console.error('Error en loginCandidateController:', error);
+    res.status(500).json({ message: 'Error interno del servidor' });
+  }
+};
 
 export const createCandidateController = async (req, res) => {
   try {

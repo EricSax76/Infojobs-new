@@ -8,8 +8,11 @@ const LandingPage = () => {
       {/* Navigation */}
       <nav className="landing-nav">
         <h1 className="logo">OPTIMIZZATE</h1>
-        <Link to="/login" className="btn btn-login">
-          Inicia Sesión
+        <Link to="/CandidateLogin" className="btn btn-login">
+          Inicia Sesión como Candidato
+        </Link>
+        <Link to="/CompanyLogin" className="btn btn-login">
+          Inicia Sesión como Empresa
         </Link>
       </nav>
 

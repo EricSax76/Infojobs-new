@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { login } from "../../services/authService";
+import { login } from "../../services/authServiceCandidato"; // ✅
 import "../../styles/pages/login.css";
 
 const CandidateLogin = () => {
@@ -15,8 +15,8 @@ const CandidateLogin = () => {
     try {
       const data = await login({ email, password }); // ✅ Usando authService
       console.log("Login exitoso:", data);
-      localStorage.setItem("candidato", JSON.stringify(data.empresa));
-      navigate("/DashboardCandidate");
+      localStorage.setItem("candidato", JSON.stringify(data));
+      navigate("/CandidateDashboard");
     } catch (err) {
       console.error(err.message);
       setError("Email o contraseña incorrectos.");

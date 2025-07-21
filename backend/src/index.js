@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import { connectToDatabase } from '../database/connection.js';
 import jobOffersRoutes from '../routes/offerRoutes.js';
-import userRoutes from './routes/users.js'; // O ajusta la ruta si estás en otra carpeta
+import userRoutes from '../routes/users.js'; // O ajusta la ruta si estás en otra carpeta
 import candidateRoutes from "../routes/candidateRoutes.js";
 import companyRoutes from "../routes/companyRoutes.js";
 import dotenv from "dotenv";

@@ -25,7 +25,7 @@ const CandidateLogin = () => {
 
   return (
     <div className="login-container">
-      <h2>Login de Empresa</h2>
+      <h2>Nombre del Candidato</h2>
       <form onSubmit={handleLogin}>
         <input
           type="email"

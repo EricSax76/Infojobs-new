@@ -30,7 +30,7 @@ const Candidateregister = () => {
       
       if (response.ok) {
         console.log("Candidato registrado con éxito");
-        navigate("/login"); // Redirigir solo si el registro fue exitoso
+        navigate("/CandidateLogin"); // Redirigir solo si el registro fue exitoso
       } else {
         console.error("Error al registrar el candidato");
       }

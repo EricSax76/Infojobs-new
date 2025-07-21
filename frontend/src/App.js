@@ -1,10 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import DashboardCompany from './pages/DashboardCompany';
+import DashboardCompany from './pages/DashboardCompany.js';
 import CandidateLogin from "./pages/auth/CandidateLogin.js"
 import JobOfferPage from './pages/JobOfferPage';
 import LandingPage from "./pages/LandingPage";
-import Login from "./pages/Login";
 import CompanyLogin from "./pages/auth/CompanyLogin";
 import Companyregister from "./pages/auth/Companyregister";
 import Candidateregister from "./pages/auth/Candidateregister.js";
@@ -19,15 +18,14 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={<LandingPage />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="candidateregister" element={<Candidateregister />} />
+                    <Route path="Candidateregister" element={<Candidateregister />} />
                     <Route path="CandidateLogin" element={<CandidateLogin />} />
                     <Route path='CandidateDashboard' element={<CandidateDashboard />} />
-                    <Route path="companyregister" element={<Companyregister />} />
+                    <Route path="Companyregister" element={<Companyregister />} />
                     <Route path="/CompanyLogin" element={<CompanyLogin />} />
-                    <Route path="/DashboarCompany" element={<DashboardCompany />} />
+                    <Route path="/DashboardCompany" element={<DashboardCompany />} />
                     <Route path="/job-offer" element={<JobOfferPage />} />
-                    <Route path='CandidateDashboard' element={<CandidateDashboard />} />
+                    
                     
                 </Routes>
             </Router>

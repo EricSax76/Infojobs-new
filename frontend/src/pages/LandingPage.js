@@ -7,7 +7,7 @@ const LandingPage = () => {
     <div className="landing-container">
       {/* Navigation */}
       <nav className="landing-nav">
-        <h1 className="logo">OPTIMIZZATE</h1>
+        <h1 className="logo">OPTIJOB</h1>
         <Link to="/CandidateLogin" className="btn btn-login">
           Inicia Sesión como Candidato
         </Link>
@@ -101,7 +101,7 @@ const LandingPage = () => {
       </main>
 
       <footer className="landing-footer">
-        <p>© 2024 Tu Empresa. Todos los derechos reservados.</p>
+        <p>© 2025 Tu Empresa. Todos los derechos reservados.</p>
       </footer>
     </div>
   );

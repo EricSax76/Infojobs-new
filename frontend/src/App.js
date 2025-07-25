@@ -21,6 +21,7 @@ function App() {
                     <Route path="Candidateregister" element={<Candidateregister />} />
                     <Route path="/CandidateLogin" element={<CandidateLogin />} />
                     <Route path='/CandidateDashboard' element={<CandidateDashboard />} />
+                    <Route path="/job-offer" element={<JobOfferPage />} />
                     <Route path="Companyregister" element={<Companyregister />} />
                     <Route path="/CompanyLogin" element={<CompanyLogin />} />
                     <Route path="/DashboardCompany" element={<DashboardCompany />} />
